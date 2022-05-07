@@ -27,6 +27,38 @@ namespace SR.Application
 
         }
 
+        public ResultViewModel ChangePassword(int userId, ChangePasswordModel command)
+        {
+            
+            var user = _userRepository.GetBy(u=>u.Id==userId);
+            if (user == null)
+            {
+                return new ResultViewModel()
+                {
+                    IsSuccess = false,
+                    Message = "کاربری با این مشخصات یافت نشد"
+                };
+            }
+            if (user.Password != command.CurrentPassword)
+            {
+                return new ResultViewModel()
+                {
+                    Message = "رمز عبور فعلی درست نیست ",
+                    IsSuccess = false
+                };
+            }
+            user.ChangePassword(command.Password);
+            _userRepository.Save();
+
+            return new ResultViewModel()
+            {
+                IsSuccess = true,
+                Message = "رمز با موفقیت تغییر یافت"
+            }
+            ;
+          
+        }
+
         public ResultViewModel<int> Create(CreateUser command)
         {
             //check organization is exist or not

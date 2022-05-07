@@ -1,11 +1,11 @@
-﻿@model SR.Application.Contract.User.EditUser
+﻿@model SR.Application.Contract.User.FullEditUser
 @{
     ViewBag.Title = "اطلاعات کاربری";
 }
 
 
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-8 col-sm-12 mx-auto ">
 
         <div class="card">
             <div class="card-header text-center">
@@ -28,8 +28,25 @@
                 <br />
                 <label>@SR.Application.Contract.Resources.User.Organization:</label>
                 <span>@Model.Organization</span>
+                <br />
+                <label>@SR.Application.Contract.Resources.User.IsAdmin:</label>
+                <span>
+                    @if (Model.IsAdmin)
+                    {
+                        <i class="fa fa-check text-success"></i>
+
+                    }
+                    else
+                    {
+                        <i class="fa fa-remove text-danger"></i>
+                    }
+                </span>
             </div>
-           
+            <div class="card-footer" >
+                <p>اطلاعات کاربری شما در کادر بالا قابل مشاهده است . برای انجام تغییرات از قسمت منو می توانید تغییرات را انجام دهید
+                </p>
+            </div>
+
         </div>
 
     </div>

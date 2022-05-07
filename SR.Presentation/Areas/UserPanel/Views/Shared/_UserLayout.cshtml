@@ -47,6 +47,12 @@
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="/" class="nav-link">خانه</a>
                 </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    @{
+                        Html.RenderAction("IsAdminPartial", "Home");
+                    }
+
+                </li>
 
             </ul>
 
@@ -54,7 +60,7 @@
             <!-- Right navbar links -->
             @if (User.Identity.IsAuthenticated)
             {
-                var info = User.Identity.Name.Split('|');
+                
 
                 <!-- Right navbar links -->
                 <ul class="navbar-nav mr-auto">
@@ -65,7 +71,7 @@
 
                             <i class="fa fa-user"></i>
 
-                            <span><mark>@info[1]</mark></span>
+                            <span><mark>@User.Identity.Name</mark></span>
 
                         </a>
                     </li>
@@ -96,12 +102,15 @@
                 </div>-->
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
+                    @{
+                        Html.RenderAction("IsAdminPartial", "Home");
+                    }
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
-                        with font-awesome or any other icon font library -->
+        with font-awesome or any other icon font library -->
                         <li class="nav-item has-treeview  @*menu-open*@" id="userInfoMenu">
                             <a href="#" class="nav-link @*active*@" id="userInfoMenuTitle">
-                               
+
                                 <p>
                                     اطلاعات کاربری
                                     <i class="right fa fa-angle-left"></i>
@@ -147,6 +156,7 @@
                         </li>
 
                     </ul>
+
                 </nav>
                 <!-- /.sidebar-menu -->
             </div>

@@ -57,6 +57,10 @@ namespace SR.Domain.UserAgg
             IsAdmin = isAdmin;
             OrganizationId = organizationId;
         }
+        public void ChangePassword(string password)
+        {
+            Password = password;
+        }
         public void Remove()
         {
             IsRemoved = true;

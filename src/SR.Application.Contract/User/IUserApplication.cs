@@ -15,6 +15,7 @@ namespace SR.Application.Contract.User
         ResultViewModel<FullEditUser> GetDetails(int id);
         ResultViewModel<FullEditUser> GetUserBy(string code, int organizationId);
       ResultViewModel<FullEditUser> LoginUser(LoginUser command );
+        ResultViewModel ChangePassword(int userId, ChangePasswordModel command);
 
     }
 

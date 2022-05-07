@@ -50,8 +50,8 @@ namespace SR.Presentation.Controllers
                 return View(command);
             }
             var user = result.Result;
-            var cookie = user.Id.ToString() + "|" + user.Code; ;
-            FormsAuthentication.SetAuthCookie(cookie, true);
+            
+            FormsAuthentication.SetAuthCookie( user.Id.ToString(),true);
 
             if (string.IsNullOrEmpty(returnUrl))
             {
@@ -66,6 +66,7 @@ namespace SR.Presentation.Controllers
             return RedirectToAction("Login");
         }
 
+        
 
     }
 }

@@ -64,7 +64,7 @@
 
             @if (User.Identity.IsAuthenticated)
             {
-                var info = User.Identity.Name.Split('|');
+                
 
                 <!-- Right navbar links -->
                 <ul class="navbar-nav mr-auto">
@@ -75,7 +75,7 @@
 
                             <i class="fa fa-user"></i>
 
-                            <span><mark>@info[1]</mark></span>
+                            <span><mark>@User.Identity.Name</mark></span>
 
                         </a>
                     </li>

@@ -58,6 +58,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="User\ChangePasswordModel.cs" />
     <Compile Include="User\CreateUser.cs" />
     <Compile Include="User\EditUser.cs" />
     <Compile Include="User\FullEditUser.cs" />

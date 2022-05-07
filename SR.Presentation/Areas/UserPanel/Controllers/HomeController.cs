@@ -1,16 +1,7 @@
 
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
 ﻿using SR.Application;
 using SR.Application.Contract.User;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
 
-using System.Web;
 using System.Web.Mvc;
 
 namespace SR.Presentation.Areas.UserPanel.Controllers
@@ -31,9 +22,9 @@ namespace SR.Presentation.Areas.UserPanel.Controllers
         public ActionResult Index()
         {
            
-            var user = User.Identity.Name.Split('|');
-            var userId = int.Parse(user[0]);
-            EditUser userInfo = _userApplication.GetDetails(userId).Result;
+            ;
+            var userId = int.Parse(User.Identity.Name);
+            FullEditUser userInfo = _userApplication.GetDetails(userId).Result;
             return View(userInfo);
         }
 
@@ -55,12 +46,34 @@ namespace SR.Presentation.Areas.UserPanel.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult ChangePassword(string pass)
+        public ActionResult ChangePassword(ChangePasswordModel command)
         {
-            return View();
+            if (!ModelState.IsValid)
+            {
+                return View(command);
+            }
+            var userId = int.Parse(User.Identity.Name);
+            var result = _userApplication.ChangePassword(userId, command);
+            if (result.IsSuccess == false)
+            {
+                ModelState.AddModelError("", result.Message);
+                return View(command);
+            }
+
+            return RedirectToAction("Index");
         }
 
-
+        [Authorize]
+        public ActionResult IsAdminPartial()
+        {
+            var userId = int.Parse(User.Identity.Name);
+            var result = _userApplication.GetDetails(userId);
+            if (result.IsSuccess == true && result.Result.IsAdmin)
+            {
+                ViewBag.IsAdmin = true;
+            }
+            return PartialView("_IsAdminPartial");
+        }
 
     }
 }
