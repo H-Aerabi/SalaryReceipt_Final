@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "XQIadVv8hUr/hs4M9eA1O2DV2uV5zBL3kZTehvvwJRyqKLGH0Hw/WSwe+aL8k/Oql1aY3qBFnzs6T3cSoOPaUg==",
+  "success": true,
+  "projectFilePath": "E:\\Projects\\SalaryProject_Final\\src\\SR.Infrastructure.EF\\SR.Infrastructure.EF.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Payamresan\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512"
+  ],
+  "logs": []
+}

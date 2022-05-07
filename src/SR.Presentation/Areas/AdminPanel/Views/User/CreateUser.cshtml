@@ -1,0 +1,145 @@
+﻿@model SR.Application.Contract.User.CreateUser
+@using SR.Application.Contract.Organization
+@{
+    ViewBag.Title = "ایجاد کاربر جدید";
+}
+
+
+<h5 class="text-center mt-2 p-2">ایجاد کاربر جدید</h5>
+
+@{
+    ViewBag.Title = "ایجاد کاربر";
+    SelectList organizations = ViewBag.Organizations as SelectList;
+
+}
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <form class=" mb-5 row" method="post">
+            @Html.AntiForgeryToken()
+            <div class="card  col-md-6 mx-auto ">
+                <div class="card-header text-center">
+                    اطلاعات کاربری
+                </div>
+                <div class="card-body">
+
+                    <div class="form-horizontal">
+                        <h4></h4>
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Code, htmlAttributes: new { @class = "control-label " })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Code, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Code, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.OrganizationId, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.DropDownListFor(model => model.OrganizationId, organizations, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.OrganizationId, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.FullName, htmlAttributes: new { @class = "control-label " })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label " })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.PhoneNumber, htmlAttributes: new { @class = "control-label " })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <hr />
+                            <div class="col-md-10 ">
+
+                                @Html.CheckBoxFor(model => model.IsAdmin, new { htmlAttributes = new { @class = "form-control" } })
+
+                                @Html.LabelFor(model => model.IsAdmin, htmlAttributes: new { @class = "control-label " })
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="ثبت" class="btn btn-block btn-outline-success" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    
+                        <p><i class="fa fa-warning text-info"></i>اطلاعات را با دقت وارد کنید و در صورتی که می خواهید کابر مدیر سیستم باشد تیک  "مدیر سیستم " را فعال کرده و بر روی گزینه ثبت کلیک کنید</p>
+                  
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+<div>
+    @Html.ActionLink("برگشت به لیست", "Index")
+</div>
+
+@section Scripts {
+    <script>
+
+
+        //Open userManagerMenu && active userManagerMenuTitle
+        let userManagerMenu = document.getElementById("userManagerMenu");
+        userManagerMenu.classList.add("menu-open");
+
+        let userManagerMenuTitle = document.getElementById("userManagerMenuTitle");
+        userManagerMenuTitle.classList.add("active")
+
+        let userSubmenu = document.getElementById("userSubmenu");
+        userSubmenu.classList.add("active");
+
+
+                    //
+
+
+
+                    //let btns = document.querySelectorAll(".page-link");
+                    //let mainForm = document.querySelector("#mainForm");
+                    //let pageId = document.querySelector("#pageId");
+
+
+
+                    //btns.forEach(btn => {
+                    //    btn.addEventListener("click", e => {
+                    //        let enPageId = e.target.innerText;
+                    //        pageId.value = enPageId.replace(/[٠-٩]/g, d => "٠١٢٣٤٥٦٧٨٩".indexOf(d)).replace(/[۰-۹]/g, d => "۰۱۲۳۴۵۶۷۸۹".indexOf(d));
+
+                    //        mainForm.submit();
+
+                    //    });
+                    //})
+
+
+    </script>
+    @Scripts.Render("~/bundles/jqueryval")
+}

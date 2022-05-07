@@ -1,0 +1,167 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\Payamresan\\SalaryReceipt\\SR.Infrastructure.Core\\SR.Infrastructure.Core.csproj": {}
+  },
+  "projects": {
+    "F:\\Payamresan\\SalaryReceipt\\SR.Application.Contract\\SR.Application.Contract.csproj": {
+      "restore": {
+        "projectUniqueName": "F:\\Payamresan\\SalaryReceipt\\SR.Application.Contract\\SR.Application.Contract.csproj",
+        "projectName": "SR.Application.Contract",
+        "projectPath": "F:\\Payamresan\\SalaryReceipt\\SR.Application.Contract\\SR.Application.Contract.csproj"
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "F:\\Payamresan\\SalaryReceipt\\SR.Application\\SR.Application.csproj": {
+      "restore": {
+        "projectUniqueName": "F:\\Payamresan\\SalaryReceipt\\SR.Application\\SR.Application.csproj",
+        "projectName": "SR.Application",
+        "projectPath": "F:\\Payamresan\\SalaryReceipt\\SR.Application\\SR.Application.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "F:\\Payamresan\\SalaryReceipt\\SR.Application.Contract\\SR.Application.Contract.csproj": {
+                "projectPath": "F:\\Payamresan\\SalaryReceipt\\SR.Application.Contract\\SR.Application.Contract.csproj"
+              },
+              "F:\\Payamresan\\SalaryReceipt\\SR.Domain\\SR.Domain.csproj": {
+                "projectPath": "F:\\Payamresan\\SalaryReceipt\\SR.Domain\\SR.Domain.csproj"
+              },
+              "F:\\Payamresan\\SalaryReceipt\\SR.Infrastructure.EF\\SR.Infrastructure.EF.csproj": {
+                "projectPath": "F:\\Payamresan\\SalaryReceipt\\SR.Infrastructure.EF\\SR.Infrastructure.EF.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "F:\\Payamresan\\SalaryReceipt\\SR.Domain\\SR.Domain.csproj": {
+      "restore": {
+        "projectUniqueName": "F:\\Payamresan\\SalaryReceipt\\SR.Domain\\SR.Domain.csproj",
+        "projectName": "SR.Domain",
+        "projectPath": "F:\\Payamresan\\SalaryReceipt\\SR.Domain\\SR.Domain.csproj"
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "F:\\Payamresan\\SalaryReceipt\\SR.Infrastructure.Core\\SR.Infrastructure.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Payamresan\\SalaryReceipt\\SR.Infrastructure.Core\\SR.Infrastructure.Core.csproj",
+        "projectName": "SR.Infrastructure.Core",
+        "projectPath": "F:\\Payamresan\\SalaryReceipt\\SR.Infrastructure.Core\\SR.Infrastructure.Core.csproj",
+        "packagesPath": "C:\\Users\\Milad_Rayaneh.co\\.nuget\\packages\\",
+        "outputPath": "F:\\Payamresan\\SalaryReceipt\\SR.Infrastructure.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Milad_Rayaneh.co\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "F:\\Payamresan\\SalaryReceipt\\SR.Application.Contract\\SR.Application.Contract.csproj": {
+                "projectPath": "F:\\Payamresan\\SalaryReceipt\\SR.Application.Contract\\SR.Application.Contract.csproj"
+              },
+              "F:\\Payamresan\\SalaryReceipt\\SR.Application\\SR.Application.csproj": {
+                "projectPath": "F:\\Payamresan\\SalaryReceipt\\SR.Application\\SR.Application.csproj"
+              },
+              "F:\\Payamresan\\SalaryReceipt\\SR.Domain\\SR.Domain.csproj": {
+                "projectPath": "F:\\Payamresan\\SalaryReceipt\\SR.Domain\\SR.Domain.csproj"
+              },
+              "F:\\Payamresan\\SalaryReceipt\\SR.Infrastructure.EF\\SR.Infrastructure.EF.csproj": {
+                "projectPath": "F:\\Payamresan\\SalaryReceipt\\SR.Infrastructure.EF\\SR.Infrastructure.EF.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "F:\\Payamresan\\SalaryReceipt\\SR.Infrastructure.EF\\SR.Infrastructure.EF.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Payamresan\\SalaryReceipt\\SR.Infrastructure.EF\\SR.Infrastructure.EF.csproj",
+        "projectName": "SR.Infrastructure.EF",
+        "projectPath": "F:\\Payamresan\\SalaryReceipt\\SR.Infrastructure.EF\\SR.Infrastructure.EF.csproj",
+        "packagesPath": "C:\\Users\\Milad_Rayaneh.co\\.nuget\\packages\\",
+        "outputPath": "F:\\Payamresan\\SalaryReceipt\\SR.Infrastructure.EF\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Milad_Rayaneh.co\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "F:\\Payamresan\\SalaryReceipt\\SR.Domain\\SR.Domain.csproj": {
+                "projectPath": "F:\\Payamresan\\SalaryReceipt\\SR.Domain\\SR.Domain.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

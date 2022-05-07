@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/AdminPanelAssets/home/bootstrap.rtl.min.css" rel="stylesheet" />
+    <link href="~/AdminPanelAssets/home/custom.css" rel="stylesheet" />
+    <title>@ViewBag.Title | برنامه فیش حقوقی</title>
+    <style>
+
+    </style>
+
+</head>
+
+<body class="pt-5">
+  
+
+    <div class="container body-content  ">
+
+        @*@if (User.Identity.IsAuthenticated) { 
+        <h1>@User.Identity.Name</h1>
+        }*@
+       
+            @RenderBody()
+
+     
+        <footer>
+           
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

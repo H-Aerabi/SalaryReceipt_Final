@@ -1,0 +1,59 @@
+﻿@model SR.Application.Contract.User.EditUser
+@{
+    ViewBag.Title = "اطلاعات کاربری";
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+
+        <div class="card">
+            <div class="card-header text-center">
+                <h6>اطلاعات کاربری</h6>
+            </div>
+
+
+            <div class="card-body">
+                <label>@SR.Application.Contract.Resources.User.UserName :</label>
+                <mark><span>@Model.Code</span></mark>
+                <br />
+                <label>@SR.Application.Contract.Resources.User.FullName :</label>
+                <span>@Model.FullName</span>
+                <br />
+                <label>@SR.Application.Contract.Resources.User.Email:</label>
+                <span>@Model.Email</span>
+                <br />
+                <label>@SR.Application.Contract.Resources.User.PhoneNumber:</label>
+                <span>@Model.PhoneNumber</span>
+                <br />
+                <label>@SR.Application.Contract.Resources.User.Organization:</label>
+                <span>@Model.Organization</span>
+            </div>
+           
+        </div>
+
+    </div>
+</div>
+
+@section Scripts{
+
+    <script>
+
+
+        //Open userInforMenu && active userInfoMenuTitle
+        let userManagerMenu = document.getElementById("userInfoMenu");
+        userManagerMenu.classList.add("menu-open");
+
+        let userManagerMenuTitle = document.getElementById("userInfoMenuTitle");
+        userManagerMenuTitle.classList.add("active")
+
+        let userSubmenu = document.getElementById("userInfoSubmenu");
+        userSubmenu.classList.add("text-success");
+
+
+
+
+    </script>
+
+}
+

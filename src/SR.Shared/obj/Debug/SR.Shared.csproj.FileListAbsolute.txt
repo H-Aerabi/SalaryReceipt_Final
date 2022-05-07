@@ -1,0 +1,11 @@
+E:\Projects\SalaryProject_Final\src\SR.Shared\bin\Debug\SR.Shared.dll
+E:\Projects\SalaryProject_Final\src\SR.Shared\bin\Debug\SR.Shared.pdb
+E:\Projects\SalaryProject_Final\src\SR.Shared\obj\Debug\SR.Shared.csproj.AssemblyReference.cache
+E:\Projects\SalaryProject_Final\src\SR.Shared\obj\Debug\SR.Shared.csproj.CoreCompileInputs.cache
+E:\Projects\SalaryProject_Final\src\SR.Shared\obj\Debug\SR.Shared.dll
+E:\Projects\SalaryProject_Final\src\SR.Shared\obj\Debug\SR.Shared.pdb
+C:\Users\Milad_Rayaneh.co\Desktop\Salary1\SalaryReceipt_Final\src\SR.Shared\bin\Debug\SR.Shared.dll
+C:\Users\Milad_Rayaneh.co\Desktop\Salary1\SalaryReceipt_Final\src\SR.Shared\bin\Debug\SR.Shared.pdb
+C:\Users\Milad_Rayaneh.co\Desktop\Salary1\SalaryReceipt_Final\src\SR.Shared\obj\Debug\SR.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Milad_Rayaneh.co\Desktop\Salary1\SalaryReceipt_Final\src\SR.Shared\obj\Debug\SR.Shared.dll
+C:\Users\Milad_Rayaneh.co\Desktop\Salary1\SalaryReceipt_Final\src\SR.Shared\obj\Debug\SR.Shared.pdb

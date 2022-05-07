@@ -1,0 +1,17 @@
+F:\Payamresan\SalaryReceipt\SR.Infrastructure.Core\bin\Debug\SR.Infrastructure.Core.dll
+F:\Payamresan\SalaryReceipt\SR.Infrastructure.Core\bin\Debug\SR.Infrastructure.Core.pdb
+F:\Payamresan\SalaryReceipt\SR.Infrastructure.Core\bin\Debug\EntityFramework.SqlServer.dll
+F:\Payamresan\SalaryReceipt\SR.Infrastructure.Core\bin\Debug\EntityFramework.dll
+F:\Payamresan\SalaryReceipt\SR.Infrastructure.Core\bin\Debug\SR.Application.Contract.dll
+F:\Payamresan\SalaryReceipt\SR.Infrastructure.Core\bin\Debug\SR.Application.dll
+F:\Payamresan\SalaryReceipt\SR.Infrastructure.Core\bin\Debug\SR.Domain.dll
+F:\Payamresan\SalaryReceipt\SR.Infrastructure.Core\bin\Debug\SR.Infrastructure.EF.dll
+F:\Payamresan\SalaryReceipt\SR.Infrastructure.Core\bin\Debug\SR.Application.Contract.pdb
+F:\Payamresan\SalaryReceipt\SR.Infrastructure.Core\bin\Debug\SR.Application.pdb
+F:\Payamresan\SalaryReceipt\SR.Infrastructure.Core\bin\Debug\SR.Domain.pdb
+F:\Payamresan\SalaryReceipt\SR.Infrastructure.Core\bin\Debug\SR.Infrastructure.EF.pdb
+F:\Payamresan\SalaryReceipt\SR.Infrastructure.Core\obj\Debug\SR.Infrastructure.Core.csprojAssemblyReference.cache
+F:\Payamresan\SalaryReceipt\SR.Infrastructure.Core\obj\Debug\SR.Infrastructure.Core.csproj.CoreCompileInputs.cache
+F:\Payamresan\SalaryReceipt\SR.Infrastructure.Core\obj\Debug\SR.Infrastructure.Core.csproj.CopyComplete
+F:\Payamresan\SalaryReceipt\SR.Infrastructure.Core\obj\Debug\SR.Infrastructure.Core.dll
+F:\Payamresan\SalaryReceipt\SR.Infrastructure.Core\obj\Debug\SR.Infrastructure.Core.pdb

@@ -1,0 +1,153 @@
+﻿@model List<SR.Application.Contract.User.UserViewModel>
+@{
+    ViewBag.Title = "مدیریت کاربران";
+}
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">مدیریت کاربران</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-left">
+                    <li class="breadcrumb-item"><a href="/AdminPanel/Home/Index">خانه</a></li>
+                    <li class="breadcrumb-item active">مدیریت کاربران</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title text-center">لیست کاربران</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <div id="example1_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
+            <a class="btn btn-outline-success" href="/AdminPanel/User/CreateUser">ایجاد کاربر جدید</a>
+
+            @*<div class="row">*@
+            <fieldset class="p-1 mb-1 border ">
+                <legend style="max-width:300px;" class="text-center"><small>جست و جو بر اساس :</small> </legend>
+
+                <form id="mainForm" class="row">
+                    <input type="hidden" name="pageId" id="pageId" />
+                    <div class="col-md-9 col-sm-8 d-flex align-items-center">
+                        <label class="m-1">
+                          @SR.Application.Contract.Resources.User.Email :
+                            <input type="text" class="form-control" name="email" id="email" />
+                        </label>
+                        <label class=" m-1">
+                            @SR.Application.Contract.Resources.User.FullName :
+                            <input type="text" class="form-control" name="userName" id="userName" />
+                        </label>
+                    </div>
+                    <div class="col-md-3 col-sm-4 d-flex align-items-center">
+                        <button class="btn btn-outline-success">بیاب</button>
+                        <a asp-controller="User" asp-action="Index" class="btn btn-outline-info ">همه </a>
+                    </div>
+
+                </form>
+            </fieldset>
+            @*</div>*@
+
+            <div class="row mt-3">
+                <div class="col-sm-12">
+                    <table id="example1" class="table table-bordered table-striped dataTable text-center table-responsive-sm" role="grid">
+                        <thead class="bg-info">
+                            <tr role="row">
+
+                                <th class="sorting" tabindex="0">#</th>
+                                <th class="sorting" tabindex="0">@SR.Application.Contract.Resources.User.UserName
+                                </th>
+                                <th class="sorting" tabindex="0">@SR.Application.Contract.Resources.User.FullName
+                                </th>
+                                <th class="sorting" tabindex="0">@SR.Application.Contract.Resources.User.Organization </th>
+                                <th class="sorting" tabindex="0">@SR.Application.Contract.Resources.User.IsActive
+                                </th>
+                                <th class="sorting" tabindex="0">عملیات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @for (int i = 0; i < Model.Count; i++)
+                            {
+
+                            <tr role="row">
+
+                                <td>@(i+1)</td>
+                                <td class="sorting_1">@Model[i].Code</td>
+                                <td class="sorting_1">@Model[i].FullName</td>
+                                <td class="sorting_1">@Model[i].Organization</td>
+
+                                <td class="sorting_1"><i class="@(Model[i].IsActive?"fa fa-check text-success":"fa fa-close text-danger")"></i></td>
+                                <td class="sorting_1">
+                                    <a href="/AdminPanel/User/EditUser/@Model[i].UserId" class="btn btn-outline-warning" title="ویرایش">ویرایش</a>
+                                    <a class="btn btn-outline-danger" title="حذف">حذف</a>
+
+                                </td>
+
+
+
+                            </tr>
+
+                            }
+
+
+
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-5">
+                </div>
+                <div class="col-sm-12 col-md-7">
+                    <div class="dataTables_paginate paging_simple_numbers" id="example1_paginate">
+                        <ul class="pagination">
+
+
+                            @*@for (int i = 1; i <= Model.PageCount; i++)
+                                                        {
+                                                            if (Model.PageCount >= 2)
+                                                            {
+                                                                <li class="paginate_button page-item @(Model.PageId == i ? "active" : "")">
+                                                                    <a aria-controls="example1" data-dt-idx="2" tabindex="0" class="page-link" style="border-top-left-radius: 0;
+                                                            border-bottom-left-radius: 0;border-top-right-radius:0;
+                                border-bottom-right-radius:0px;font-language-override:normal">@(i)</a>
+                                                                </li>
+                                                            }
+                                                        }*@
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.card-body -->
+</div>
+
+@section Scripts{
+
+    <script>
+
+
+        //Open userManagerMenu && active userManagerMenuTitle
+        let userManagerMenu = document.getElementById("userManagerMenu");
+        userManagerMenu.classList.add("menu-open");
+
+        let userManagerMenuTitle = document.getElementById("userManagerMenuTitle");
+        userManagerMenuTitle.classList.add("active")
+
+        let userSubmenu = document.getElementById("userSubmenu");
+        userSubmenu.classList.add("active");
+
+
+
+    </script>
+
+}
+

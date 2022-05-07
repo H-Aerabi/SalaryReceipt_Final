@@ -1,0 +1,95 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\Projects\\SalaryProject_Final\\src\\SR.Infrastructure.EF\\SR.Infrastructure.EF.csproj": {}
+  },
+  "projects": {
+    "E:\\Projects\\SalaryProject_Final\\src\\SR.Domain\\SR.Domain.csproj": {
+      "restore": {
+        "projectUniqueName": "E:\\Projects\\SalaryProject_Final\\src\\SR.Domain\\SR.Domain.csproj",
+        "projectName": "SR.Domain",
+        "projectPath": "E:\\Projects\\SalaryProject_Final\\src\\SR.Domain\\SR.Domain.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "E:\\Projects\\SalaryProject_Final\\src\\SR.Shared\\SR.Shared.csproj": {
+                "projectPath": "E:\\Projects\\SalaryProject_Final\\src\\SR.Shared\\SR.Shared.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "E:\\Projects\\SalaryProject_Final\\src\\SR.Infrastructure.EF\\SR.Infrastructure.EF.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Projects\\SalaryProject_Final\\src\\SR.Infrastructure.EF\\SR.Infrastructure.EF.csproj",
+        "projectName": "SR.Infrastructure.EF",
+        "projectPath": "E:\\Projects\\SalaryProject_Final\\src\\SR.Infrastructure.EF\\SR.Infrastructure.EF.csproj",
+        "packagesPath": "C:\\Users\\Payamresan\\.nuget\\packages\\",
+        "outputPath": "E:\\Projects\\SalaryProject_Final\\src\\SR.Infrastructure.EF\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\Payamresan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "E:\\Projects\\SalaryProject_Final\\src\\SR.Domain\\SR.Domain.csproj": {
+                "projectPath": "E:\\Projects\\SalaryProject_Final\\src\\SR.Domain\\SR.Domain.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "E:\\Projects\\SalaryProject_Final\\src\\SR.Shared\\SR.Shared.csproj": {
+      "restore": {
+        "projectUniqueName": "E:\\Projects\\SalaryProject_Final\\src\\SR.Shared\\SR.Shared.csproj",
+        "projectName": "SR.Shared",
+        "projectPath": "E:\\Projects\\SalaryProject_Final\\src\\SR.Shared\\SR.Shared.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    }
+  }
+}
