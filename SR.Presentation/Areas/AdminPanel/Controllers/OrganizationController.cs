@@ -1,5 +1,6 @@
 ﻿using SR.Application;
 using SR.Application.Contract.Organization;
+using SR.Presentation.Security;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,8 @@ using System.Web.Mvc;
 
 namespace SR.Presentation.Areas.AdminPanel.Controllers
 {
-    //[Authorize]
+  
+    [CheckIsAdmin]
     public class OrganizationController : Controller
     {
         private readonly IOrganizationApplication _organizationApplication;

@@ -133,6 +133,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\CustomAuthorizeAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminPanelAssets\css\adminlte.css" />
@@ -1110,7 +1111,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\AdminPanel\Data\" />
     <Folder Include="Areas\UserPanel\Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

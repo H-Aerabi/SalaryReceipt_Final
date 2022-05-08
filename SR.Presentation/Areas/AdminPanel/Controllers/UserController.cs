@@ -7,10 +7,11 @@ using SR.Application.Contract;
 using SR.Application;
 using SR.Application.Contract.User;
 using SR.Application.Contract.Organization;
+using SR.Presentation.Security;
 
 namespace SR.Presentation.Areas.AdminPanel.Controllers
 {
-
+    [CheckIsAdmin]
     public class UserController : Controller
     {
         private readonly IUserApplication _userApplication;
