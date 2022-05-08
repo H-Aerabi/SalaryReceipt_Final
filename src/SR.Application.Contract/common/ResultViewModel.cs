@@ -18,23 +18,18 @@ namespace SR.Application.Contract.common
         public string Message { get; set; }
         public bool IsSuccess { get; set; }
 
-        //public ResultViewModel Success(string message="عملیات موفق")
-        //{
-        //    return new ResultViewModel()
-        //    {
-        //        Message = message,
-        //        IsSuccess = true
-        //    };
-        //}
-
-        //public ResultViewModel Failed(string message = "عملیات ناموفق")
-        //{
-        //    return new ResultViewModel()
-        //    {
-        //        Message = message,
-        //        IsSuccess = true
-        //    };
-        //}
+        public ResultViewModel Success(string message="عملیات با موفقیت انجام شد ")
+        {
+            Message = message;
+            IsSuccess = true;
+            return this;
+        }
+        public ResultViewModel Failed(string message="عملیات ناموفق")
+        {
+            Message = message;
+            IsSuccess = false;
+            return this;
+        }
     }
 
   

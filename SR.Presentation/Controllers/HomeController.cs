@@ -1,5 +1,7 @@
 ﻿
 
+using SR.Application;
+using SR.Application.Contract.User;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +12,12 @@ namespace SR.Presentation.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IUserApplication _userApplication;
+        public HomeController()
+        {
+            _userApplication = new UserApplication();
+
+        }
         public ActionResult Index()
         {
             return RedirectToAction("Logout","Account");
@@ -21,7 +29,8 @@ namespace SR.Presentation.Controllers
         {
             return Content("Success enter to test action....");
         }
-             
-      
+
+       
+
     }
 }

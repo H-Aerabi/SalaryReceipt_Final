@@ -20,10 +20,12 @@ namespace SR.Application.Contract.User
 
         [Display(Name = "Email", ResourceType = typeof(Resources.User))]
         //[Required(ErrorMessage ="لطفا {0} را وارد کنید")]
-        [EmailAddress(ErrorMessage ="قرمت {0} درست نیست")]
+        [DataType(DataType.EmailAddress,ErrorMessage ="فرمت {0} درست نیس")]
+        [EmailAddress(ErrorMessage = "فرمت {0} درست نیست")]
         public string Email { get; set; }
 
         [Display(Name = "PhoneNumber", ResourceType = typeof(Resources.User))]
+        [RegularExpression(@"^(\+98|0)?9\d{9}$", ErrorMessage = "فرمت {0} اشتباه است")]
         //[Required(ErrorMessage ="لطفا {0} را وارد کنید")]
         public string PhoneNumber { get; set; }
 

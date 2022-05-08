@@ -49,7 +49,8 @@
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     @{
-                        Html.RenderAction("IsAdminPartial", "Home");
+                        Html.RenderAction("IsAdminPartial", "Home",new {area="UserPanel"});
+
                     }
 
                 </li>
@@ -60,20 +61,16 @@
             <!-- Right navbar links -->
             @if (User.Identity.IsAuthenticated)
             {
-                
+
 
                 <!-- Right navbar links -->
                 <ul class="navbar-nav mr-auto">
 
 
                     <li class="nav-item">
-                        <a class="nav-link" @*data-widget="control-sidebar" data-slide="true"*@ href="/UserPanel/Home/Index">
-
-                            <i class="fa fa-user"></i>
-
-                            <span><mark>@User.Identity.Name</mark></span>
-
-                        </a>
+                        @{ 
+                            Html.RenderAction("LoginInfoPartial", "Home", new { area = "UserPanel" });
+                        }
                     </li>
 
 

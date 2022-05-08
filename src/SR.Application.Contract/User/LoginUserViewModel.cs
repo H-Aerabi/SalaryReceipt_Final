@@ -12,7 +12,7 @@ namespace SR.Application.Contract.User
     {
         [Display(Name = "UserName", ResourceType = typeof(Resources.User))]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
-        [RegularExpression(@"^[0-9]{10}$", ErrorMessage = "فرمت {0} ملی اشتباه است ")]
+        [RegularExpression(@"^[0-9]{10}$", ErrorMessage = "فرمت {0}  اشتباه است ")]
         public string Code { get; set; }
 
         [Display(Name = "Password", ResourceType = typeof(Resources.User))]

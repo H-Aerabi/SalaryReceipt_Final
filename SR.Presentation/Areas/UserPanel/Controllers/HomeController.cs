@@ -31,13 +31,26 @@ namespace SR.Presentation.Areas.UserPanel.Controllers
         [HttpGet]
         public ActionResult EditUserInfo()
         {
-            return View();
+            var userId = int.Parse(User.Identity.Name);
+
+            var userInfo = _userApplication.GetDetails(userId).Result;
+            return View(userInfo);
         }
 
         [HttpPost]
-        public ActionResult EditUserInfo(string name)
+        public ActionResult EditUserInfo(EditUser command)
         {
-            return View();
+            if (!ModelState.IsValid)
+            {
+                return View(command);
+            }
+            var result = _userApplication.Edit(command);
+            if (!result.IsSuccess)
+            {
+                ModelState.AddModelError("", result.Message);
+                return View(command);
+            }
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
@@ -64,6 +77,7 @@ namespace SR.Presentation.Areas.UserPanel.Controllers
         }
 
         [Authorize]
+        [ChildActionOnly]
         public ActionResult IsAdminPartial()
         {
             var userId = int.Parse(User.Identity.Name);
@@ -73,6 +87,17 @@ namespace SR.Presentation.Areas.UserPanel.Controllers
                 ViewBag.IsAdmin = true;
             }
             return PartialView("_IsAdminPartial");
+        }
+
+        public ActionResult LoginInfoPartial()
+        {
+            var userId = int.Parse(User.Identity.Name);
+            var result = _userApplication.GetDetails(userId);
+            if(result.IsSuccess==true)
+            {
+                ViewBag.UserName = result.Result.Code;
+            }
+            return PartialView("_LoginInfoPartial");
         }
 
     }

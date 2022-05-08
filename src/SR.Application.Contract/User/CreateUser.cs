@@ -12,7 +12,7 @@ namespace SR.Application.Contract.User
     {
         [Display(Name = "UserName", ResourceType = typeof(Resources.User))]
         [Required(ErrorMessage ="لطفا {0} را وارد کنید")]
-       [RegularExpression(@"^[0-9]{10}$", ErrorMessage ="فرمت کد ملی اشتباه است ")]
+       [RegularExpression(@"^[0-9]{10}$", ErrorMessage ="فرمت  {0} اشتباه است ")]
         ///^[0-9]{10}$/g
         public string Code { get; set; }
 
@@ -23,9 +23,11 @@ namespace SR.Application.Contract.User
         [Display(Name = "Email", ResourceType = typeof(Resources.User))]
         //[Required(ErrorMessage ="لطفا {0} را وارد کنید")]
         [EmailAddress(ErrorMessage = "فرمت {0} درست نیست")]
+        [DataType(DataType.EmailAddress,ErrorMessage ="فرمت {0} درست نیس")]
         public string Email { get; set; }
 
         [Display(Name = "PhoneNumber", ResourceType = typeof(Resources.User))]
+        [RegularExpression(@"^(\+98|0)?9\d{9}$", ErrorMessage = "فرمت {0} اشتباه است")]
         //[Required(ErrorMessage ="لطفا {0} را وارد کنید")]
         public string PhoneNumber { get; set; }
 

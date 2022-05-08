@@ -12,12 +12,13 @@ namespace SR.Application.Contract.User
         List<UserViewModel> GetAll();
         ResultViewModel<int> Create(CreateUser command);
         ResultViewModel Edit(FullEditUser comman);
+        ResultViewModel Edit(EditUser command);
         ResultViewModel<FullEditUser> GetDetails(int id);
         ResultViewModel<FullEditUser> GetUserBy(string code, int organizationId);
-      ResultViewModel<FullEditUser> LoginUser(LoginUser command );
+        ResultViewModel<FullEditUser> LoginUser(LoginUser command);
         ResultViewModel ChangePassword(int userId, ChangePasswordModel command);
 
     }
 
-   
+
 }

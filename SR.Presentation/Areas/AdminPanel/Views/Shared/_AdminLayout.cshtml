@@ -71,13 +71,9 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link" @*data-widget="control-sidebar" data-slide="true"*@ href="/UserPanel/Home/Index">
-
-                            <i class="fa fa-user"></i>
-
-                            <span><mark>@User.Identity.Name</mark></span>
-
-                        </a>
+                        @{
+                            Html.RenderAction("LoginInfoPartial", "Home", new { area = "UserPanel" });
+                        }
                     </li>
 
 
@@ -96,7 +92,7 @@
             <!-- Brand Logo -->
             <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="brand-link text-center">
 
-                <span class="brand-text font-weight-light">پنل مدیریت</span>
+                <span class="brand-text text-light font-weight-light">پنل مدیریت</span>
             </a>
 
             <!-- Sidebar -->

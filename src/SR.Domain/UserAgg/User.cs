@@ -57,6 +57,13 @@ namespace SR.Domain.UserAgg
             IsAdmin = isAdmin;
             OrganizationId = organizationId;
         }
+        public void Edit(string fullName=null,string email=null,string phoneNumber = null)
+        {
+            FullName = fullName;
+            Email = email;
+            PhoneNumber = phoneNumber;
+
+        }
         public void ChangePassword(string password)
         {
             Password = password;

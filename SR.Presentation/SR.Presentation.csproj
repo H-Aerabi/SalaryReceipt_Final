@@ -1081,6 +1081,7 @@
     <Content Include="Areas\UserPanel\Views\Shared\_UserLayout.cshtml" />
     <Content Include="Areas\UserPanel\Views\web.config" />
     <Content Include="Areas\UserPanel\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\UserPanel\Views\Home\_LoginInfoPartial.cshtml" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />

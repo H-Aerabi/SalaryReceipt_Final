@@ -29,38 +29,27 @@ namespace SR.Application
 
         public ResultViewModel ChangePassword(int userId, ChangePasswordModel command)
         {
-            
+            ResultViewModel result = new ResultViewModel();
             var user = _userRepository.GetBy(u=>u.Id==userId);
             if (user == null)
             {
-                return new ResultViewModel()
-                {
-                    IsSuccess = false,
-                    Message = "کاربری با این مشخصات یافت نشد"
-                };
+                return result.Failed("کاربری با این مشخصات یافت نشد ");
             }
             if (user.Password != command.CurrentPassword)
             {
-                return new ResultViewModel()
-                {
-                    Message = "رمز عبور فعلی درست نیست ",
-                    IsSuccess = false
-                };
+                return result.Success("رمز عبور فعلی درست نیست ");
             }
             user.ChangePassword(command.Password);
             _userRepository.Save();
 
-            return new ResultViewModel()
-            {
-                IsSuccess = true,
-                Message = "رمز با موفقیت تغییر یافت"
-            }
-            ;
+            return result.Success("رمز با موفقیت تغییر یافت");
+            
           
         }
 
         public ResultViewModel<int> Create(CreateUser command)
         {
+            
             //check organization is exist or not
             var organization = _organizationRepository.GetById(command.OrganizationId);
             if (organization == null)
@@ -108,16 +97,13 @@ namespace SR.Application
 
         public ResultViewModel Edit(FullEditUser command)
         {
+            ResultViewModel result = new ResultViewModel();
            //Get user and cheke if  exists in Databse or not 
             var user = _userRepository.GetDetailsBy(command.Id);
 
             if (user == null)
             {
-               return new  ResultViewModel()
-                {
-                    IsSuccess=false,
-                    Message="کاربری با این مشخصات یافت نشد "
-                };
+                return result.Failed("کاربری با این مشخصات یافت نشد");
             }
 
             var userForDuplicate = _userRepository.GetBy(o=>o.NationalCode==command.Code && o.OrganizationId==command.OrganizationId);
@@ -125,23 +111,33 @@ namespace SR.Application
             {
                 string codeName = SR.Application.Contract.Resources.User.UserName;
 
-                return new ResultViewModel()
-                {
-                    IsSuccess = false,
-                    Message = $"کاربری با این  {codeName} از قبل وجود دارد . لطفا با دقت اطلاعات را وارد کنید"
-                };
+                return result.Failed($"کاربری با این  {codeName} از قبل وجود دارد . لطفا با دقت اطلاعات را وارد کنید");
+
+                
             }
             user.Edit(command.IsAdmin, command.OrganizationId, command.FullName, command.Email, command.PhoneNumber);
             _userRepository.Save();
 
-          
 
-            return new ResultViewModel()
+            return result.Success("کاربر با موفقیت ویرایش شد");
+
+            
+
+        }
+        public ResultViewModel Edit(EditUser command)
+        {
+            ResultViewModel result = new ResultViewModel();
+            //Get user and cheke if  exists in Databse or not 
+            var user = _userRepository.GetDetailsBy(command.Id);
+
+            if (user == null)
             {
-                IsSuccess = true,
-                Message = "کاربر با موفقیت ویرایش شد "
+                return result.Failed("کاربری با این مشخصات یافت نشد");
             }
-            ;
+            user.Edit(command.FullName, command.Email, command.PhoneNumber);
+            _userRepository.Save();
+
+            return result.Success("اطلاعات با موفقیت ویرایش شد");
 
         }
 
