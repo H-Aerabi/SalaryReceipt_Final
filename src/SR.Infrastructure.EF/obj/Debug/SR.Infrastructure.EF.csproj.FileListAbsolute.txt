@@ -59,8 +59,6 @@ E:\Projects\SalaryProject_Final\src\SR.Infrastructure.EF\obj\Debug\SR.Infrastruc
 E:\Projects\SalaryProject_Final\src\SR.Infrastructure.EF\obj\Debug\SR.Infrastructure.EF.pdb
 E:\Projects\SalaryProject_Final\src\SR.Infrastructure.EF\bin\Debug\SR.Shared.dll
 E:\Projects\SalaryProject_Final\src\SR.Infrastructure.EF\bin\Debug\SR.Shared.pdb
-E:\Projects\SalaryProject_Final\src\SR.Infrastructure.EF\obj\Debug\SR.Infrastructure.EF.Migrations.InitAllTable.resources
-E:\Projects\SalaryProject_Final\src\SR.Infrastructure.EF\obj\Debug\SR.Infrastructure.EF.csproj.GenerateResource.cache
 C:\Users\Milad_Rayaneh.co\Desktop\Salary1\SalaryReceipt_Final\src\SR.Infrastructure.EF\bin\Debug\SR.Infrastructure.EF.dll
 C:\Users\Milad_Rayaneh.co\Desktop\Salary1\SalaryReceipt_Final\src\SR.Infrastructure.EF\bin\Debug\SR.Infrastructure.EF.pdb
 C:\Users\Milad_Rayaneh.co\Desktop\Salary1\SalaryReceipt_Final\src\SR.Infrastructure.EF\bin\Debug\EntityFramework.SqlServer.dll
@@ -76,3 +74,5 @@ C:\Users\Milad_Rayaneh.co\Desktop\Salary1\SalaryReceipt_Final\src\SR.Infrastruct
 C:\Users\Milad_Rayaneh.co\Desktop\Salary1\SalaryReceipt_Final\src\SR.Infrastructure.EF\obj\Debug\SR.Infrastructure.EF.csproj.CopyComplete
 C:\Users\Milad_Rayaneh.co\Desktop\Salary1\SalaryReceipt_Final\src\SR.Infrastructure.EF\obj\Debug\SR.Infrastructure.EF.dll
 C:\Users\Milad_Rayaneh.co\Desktop\Salary1\SalaryReceipt_Final\src\SR.Infrastructure.EF\obj\Debug\SR.Infrastructure.EF.pdb
+E:\Projects\SalaryProject_Final\src\SR.Infrastructure.EF\obj\Debug\SR.Infrastructure.EF.Migrations.init.resources
+E:\Projects\SalaryProject_Final\src\SR.Infrastructure.EF\obj\Debug\SR.Infrastructure.EF.csproj.GenerateResource.cache

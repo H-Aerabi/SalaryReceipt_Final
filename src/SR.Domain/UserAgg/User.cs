@@ -16,7 +16,7 @@ namespace SR.Domain.UserAgg
 
         public int Id { get; set; }
         public int OrganizationId { get; set; }
-        public string NationalCode { get; set; }
+        public string Code { get; set; }
         public string FullName { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
@@ -36,9 +36,9 @@ namespace SR.Domain.UserAgg
 
         }
 
-        public User(string nationalCode, int organizationId, string password, bool isAdmin = false, string fullName = null, string email = null, string phoneNumber = null)
+        public User(string code, int organizationId, string password, bool isAdmin = false, string fullName = null, string email = null, string phoneNumber = null)
         {
-            NationalCode = nationalCode;
+            Code = code;
             OrganizationId = organizationId;
             FullName = fullName;
             Password = password;

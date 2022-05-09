@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitAllTable : DbMigration
+    public partial class init : DbMigration
     {
         public override void Up()
         {
@@ -51,7 +51,7 @@
                     {
                         Id = c.Int(nullable: false, identity: true),
                         OrganizationId = c.Int(nullable: false),
-                        NationalCode = c.String(nullable: false, maxLength: 10),
+                        Code = c.String(nullable: false, maxLength: 10),
                         FullName = c.String(maxLength: 50),
                         Password = c.String(nullable: false, maxLength: 500),
                         Email = c.String(),

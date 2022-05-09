@@ -42,13 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexts\SalaryReceiptContext.cs" />
+    <Compile Include="Contexts\SalaryReceiptDbInitializer.cs" />
     <Compile Include="Mappings\JournalMapping.cs" />
     <Compile Include="Mappings\OrganizationMapping.cs" />
     <Compile Include="Mappings\PostingMapping.cs" />
     <Compile Include="Mappings\UserMapping.cs" />
-    <Compile Include="Migrations\202205011800421_InitAllTable.cs" />
-    <Compile Include="Migrations\202205011800421_InitAllTable.designer.cs">
-      <DependentUpon>202205011800421_InitAllTable.cs</DependentUpon>
+    <Compile Include="Migrations\202205091802190_init.cs" />
+    <Compile Include="Migrations\202205091802190_init.designer.cs">
+      <DependentUpon>202205091802190_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,10 +66,14 @@
       <Project>{9b9de5ce-6415-44bb-acdb-e98d4961a2f0}</Project>
       <Name>SR.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SR.Shared\SR.Shared.csproj">
+      <Project>{B23D3548-1097-4FAE-80C9-D828C3CB31D1}</Project>
+      <Name>SR.Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202205011800421_InitAllTable.resx">
-      <DependentUpon>202205011800421_InitAllTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202205091802190_init.resx">
+      <DependentUpon>202205091802190_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

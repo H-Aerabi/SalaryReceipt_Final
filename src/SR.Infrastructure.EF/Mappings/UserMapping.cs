@@ -17,7 +17,7 @@ namespace SR.Infrastructure.EF.Mappings
         {
             this.ToTable("Users");
             this.HasKey(u => u.Id);
-            this.Property(u => u.NationalCode).HasMaxLength(10).IsRequired();
+            this.Property(u => u.Code).HasMaxLength(10).IsRequired();
             //this.HasIndex(u => u.NationalCode).IsUnique();
             this.Property(u => u.FullName).HasMaxLength(50);
             this.Property(u => u.Password).HasMaxLength(500).IsRequired();

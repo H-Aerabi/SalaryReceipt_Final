@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="Enums\AllEnums.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Dto_ViewModel\SearchModel.cs" />
+    <Compile Include="Dto_ViewModel\UserViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

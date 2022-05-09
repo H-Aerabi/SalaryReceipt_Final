@@ -12,6 +12,7 @@ using SR.Application.Security;
 using SR.Domain.OrganizationAgg;
 
 using System.Resources;
+using SR.Shared.Dto_ViewModel;
 
 namespace SR.Application
 {
@@ -37,7 +38,7 @@ namespace SR.Application
             }
             if (user.Password != command.CurrentPassword)
             {
-                return result.Success("رمز عبور فعلی درست نیست ");
+                return result.Failed("رمز عبور فعلی درست نیست ");
             }
             user.ChangePassword(command.Password);
             _userRepository.Save();
@@ -63,7 +64,7 @@ namespace SR.Application
             }
 
             //check duplication user 
-            if (_userRepository.IsExists(u=>u.NationalCode==command.Code && u.OrganizationId==command.OrganizationId))
+            if (_userRepository.IsExists(u=>u.Code==command.Code && u.OrganizationId==command.OrganizationId))
             {
                 //get the name of code from Resources.User
                 string codeName = SR.Application.Contract.Resources.User.UserName;
@@ -106,7 +107,7 @@ namespace SR.Application
                 return result.Failed("کاربری با این مشخصات یافت نشد");
             }
 
-            var userForDuplicate = _userRepository.GetBy(o=>o.NationalCode==command.Code && o.OrganizationId==command.OrganizationId);
+            var userForDuplicate = _userRepository.GetBy(o=>o.Code==command.Code && o.OrganizationId==command.OrganizationId);
             if(userForDuplicate!=null && userForDuplicate.Id!=command.Id)
             {
                 string codeName = SR.Application.Contract.Resources.User.UserName;
@@ -146,7 +147,7 @@ namespace SR.Application
             return _userRepository.GetAll().Select(u => new UserViewModel()
             {
                 UserId=u.Id,
-                Code=u.NationalCode,
+                Code=u.Code,
                 FullName=u.FullName,
                 IsActive=u.IsActive,
                 Organization=u.Organization.Name
@@ -176,7 +177,7 @@ namespace SR.Application
                     Email = user.Email,
                     FullName = user.FullName,
                     PhoneNumber = user.PhoneNumber,
-                    Code=user.NationalCode,
+                    Code=user.Code,
                     OrganizationId=user.OrganizationId,
                     IsAdmin=user.IsAdmin,
                     Organization=user.Organization.Name
@@ -189,7 +190,7 @@ namespace SR.Application
 
         public ResultViewModel<FullEditUser> GetUserBy(string code, int organizationId)
         {
-            var user = _userRepository.GetBy(u=>u.NationalCode==code && u.OrganizationId==organizationId);
+            var user = _userRepository.GetBy(u=>u.Code==code && u.OrganizationId==organizationId);
             if (user == null)
             {
                 return new ResultViewModel<FullEditUser>()
@@ -207,7 +208,7 @@ namespace SR.Application
                     FullName=user.FullName,
                     Id=user.Id,
                     IsAdmin=user.IsAdmin,
-                    Code=user.NationalCode,
+                    Code=user.Code,
                     OrganizationId=user.OrganizationId,
                     PhoneNumber=user.PhoneNumber
                     
@@ -217,7 +218,7 @@ namespace SR.Application
 
         public ResultViewModel<FullEditUser> LoginUser(LoginUser command)
         {
-            var user = _userRepository.GetBy(u=>u.NationalCode==command.Code && u.OrganizationId==command.OrganizationId);
+            var user = _userRepository.GetBy(u=>u.Code==command.Code && u.OrganizationId==command.OrganizationId);
 
 
             if (user!=null && user.Password == command.Password)
@@ -231,7 +232,7 @@ namespace SR.Application
                         Email = user.Email,
                         FullName = user.FullName,
                         Id = user.Id,
-                        Code = user.NationalCode,
+                        Code = user.Code,
                         PhoneNumber = user.PhoneNumber,
                         OrganizationId = user.OrganizationId,
                         IsAdmin = user.IsAdmin
@@ -244,6 +245,11 @@ namespace SR.Application
                 IsSuccess = false,
                 Message = "کاربری با چنین مشخصات یافت نشد"
             };
+        }
+
+        public List<UserViewModel> Search(SearchModel searchModel)
+        {
+            return _userRepository.Search(searchModel).OrderByDescending(u=>u.UserId).ToList();
         }
     }
 }

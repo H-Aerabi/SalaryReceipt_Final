@@ -15,6 +15,10 @@ namespace SR.Application.Contract.common
 
     public class ResultViewModel
     {
+        public ResultViewModel()
+        {
+            IsSuccess = false;
+        }
         public string Message { get; set; }
         public bool IsSuccess { get; set; }
 

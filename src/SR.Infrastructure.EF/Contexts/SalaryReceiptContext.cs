@@ -19,7 +19,7 @@ namespace SR.Infrastructure.EF.Contexts
         
         public SalaryReceiptContext():base("SRConnectionString")
         {
-
+         //   Database.SetInitializer<SalaryReceiptContext>(new SalaryReceiptDBInitializer<SalaryReceiptContext>());
         }
 
         public DbSet<User> Users { get; set; }

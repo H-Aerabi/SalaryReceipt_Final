@@ -1132,6 +1132,14 @@
       <Project>{8038caa7-aa1c-42c4-bd9b-bc9660339203}</Project>
       <Name>SR.Application</Name>
     </ProjectReference>
+    <ProjectReference Include="..\src\SR.Infrastructure.EF\SR.Infrastructure.EF.csproj">
+      <Project>{a19e8e08-e880-453b-aa98-a844073fec61}</Project>
+      <Name>SR.Infrastructure.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\src\SR.Shared\SR.Shared.csproj">
+      <Project>{B23D3548-1097-4FAE-80C9-D828C3CB31D1}</Project>
+      <Name>SR.Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

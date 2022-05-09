@@ -34,3 +34,6 @@ C:\Users\Milad_Rayaneh.co\Desktop\Salary1\SalaryReceipt_Final\src\SR.Application
 E:\Projects\SalaryProject_Final\src\SR.Application.Contract\obj\Debug\SR.Application.Contract.Resources.Organization.resources
 E:\Projects\SalaryProject_Final\src\SR.Application.Contract\obj\Debug\SR.Application.Contract.Resources.User.resources
 E:\Projects\SalaryProject_Final\src\SR.Application.Contract\obj\Debug\SR.Application.Contract.csproj.GenerateResource.cache
+E:\Projects\SalaryProject_Final\src\SR.Application.Contract\bin\Debug\SR.Shared.dll
+E:\Projects\SalaryProject_Final\src\SR.Application.Contract\bin\Debug\SR.Shared.pdb
+E:\Projects\SalaryProject_Final\src\SR.Application.Contract\obj\Debug\SR.Application.Contract.csproj.CopyComplete

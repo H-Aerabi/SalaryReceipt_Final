@@ -7,13 +7,13 @@ namespace SR.Infrastructure.EF.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class InitAllTable : IMigrationMetadata
+    public sealed partial class init : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitAllTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(init));
         
         string IMigrationMetadata.Id
         {
-            get { return "202205011800421_InitAllTable"; }
+            get { return "202205091802190_init"; }
         }
         
         string IMigrationMetadata.Source

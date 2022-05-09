@@ -8,6 +8,7 @@ using SR.Application;
 using SR.Application.Contract.User;
 using SR.Application.Contract.Organization;
 using SR.Presentation.Security;
+using SR.Shared.Dto_ViewModel;
 
 namespace SR.Presentation.Areas.AdminPanel.Controllers
 {
@@ -23,9 +24,11 @@ namespace SR.Presentation.Areas.AdminPanel.Controllers
         }
 
 
-        public ActionResult Index()
+        public ActionResult Index(SearchModel searchModel)
         {
-            var users = _userApplication.GetAll();
+            // var users = _userApplication.GetAll();
+            ViewBag.Search = searchModel;
+            var users = _userApplication.Search(searchModel);
             return View(users);
         }
         [HttpGet]
@@ -33,6 +36,7 @@ namespace SR.Presentation.Areas.AdminPanel.Controllers
         {
             var organizations = _organizationApplication.GetAll();
             ViewBag.Organizations = new SelectList(organizations, "Id", "Name");
+
             
             return View();
         }

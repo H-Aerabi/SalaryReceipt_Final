@@ -23,6 +23,7 @@ namespace SR.Infrastructure.EF.Mappings
             this.Property(o => o.Website).HasMaxLength(500);
             this.Property(o => o.PhoneNumber).HasMaxLength(13);
             this.Property(o => o.PhoneNumber);
+            
 
 
             //relation with User

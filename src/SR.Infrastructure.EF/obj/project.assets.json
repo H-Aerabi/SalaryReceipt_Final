@@ -238,7 +238,8 @@
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.8": [
       "EntityFramework >= 6.4.4",
-      "SR.Domain >= 1.0.0"
+      "SR.Domain >= 1.0.0",
+      "SR.Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -270,6 +271,9 @@
           "projectReferences": {
             "E:\\Projects\\SalaryProject_Final\\src\\SR.Domain\\SR.Domain.csproj": {
               "projectPath": "E:\\Projects\\SalaryProject_Final\\src\\SR.Domain\\SR.Domain.csproj"
+            },
+            "E:\\Projects\\SalaryProject_Final\\src\\SR.Shared\\SR.Shared.csproj": {
+              "projectPath": "E:\\Projects\\SalaryProject_Final\\src\\SR.Shared\\SR.Shared.csproj"
             }
           }
         }

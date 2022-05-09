@@ -49,6 +49,9 @@
             "projectReferences": {
               "E:\\Projects\\SalaryProject_Final\\src\\SR.Domain\\SR.Domain.csproj": {
                 "projectPath": "E:\\Projects\\SalaryProject_Final\\src\\SR.Domain\\SR.Domain.csproj"
+              },
+              "E:\\Projects\\SalaryProject_Final\\src\\SR.Shared\\SR.Shared.csproj": {
+                "projectPath": "E:\\Projects\\SalaryProject_Final\\src\\SR.Shared\\SR.Shared.csproj"
               }
             }
           }

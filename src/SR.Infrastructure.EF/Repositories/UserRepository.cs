@@ -1,5 +1,6 @@
 ﻿using SR.Domain.UserAgg;
 using SR.Infrastructure.EF.Contexts;
+using SR.Shared.Dto_ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,6 +52,29 @@ namespace SR.Infrastructure.EF.Repositories
             _context.SaveChanges();
         }
 
-       
+        public List<UserViewModel> Search(SearchModel searchModel)
+        {
+
+            var users = _context.Users.Include("Organization").Select(u=>new UserViewModel()
+            {
+                Code=u.Code,
+                FullName=u.FullName,
+                IsActive=u.IsActive,
+                Organization=u.Organization.Name,
+                UserId=u.Id
+            }).AsQueryable();
+            //filter by Code
+            if (!string.IsNullOrWhiteSpace(searchModel.Code))
+            {
+                users = users.Where(u => u.Code.Contains(searchModel.Code));
+            }
+            //filter by FullName
+            if (!string.IsNullOrWhiteSpace(searchModel.FullName))
+            {
+                users = users.Where(u => u.FullName.Contains(searchModel.FullName));
+            }
+           
+            return users.ToList();
+        }
     }
 }

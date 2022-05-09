@@ -59,6 +59,10 @@
       <Project>{a19e8e08-e880-453b-aa98-a844073fec61}</Project>
       <Name>SR.Infrastructure.EF</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SR.Shared\SR.Shared.csproj">
+      <Project>{b23d3548-1097-4fae-80c9-d828c3cb31d1}</Project>
+      <Name>SR.Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
